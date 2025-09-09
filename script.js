@@ -21,7 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create remove button
         const removeBtn = document.createElement('button');
         removeBtn.textContent = "Remove";
-        removeBtn.className = 'remove-btn';
+
+        // Use classList.add to meet ALX checks
+        removeBtn.classList.add('remove-btn');
 
         // Remove task when clicked
         removeBtn.onclick = () => {
@@ -36,8 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
         taskInput.value = '';
     }
 
-    // Event listeners
+    // Attach event listeners
     addButton.addEventListener('click', addTask);
+
     taskInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
             addTask();
